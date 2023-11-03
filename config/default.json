@@ -1,6 +1,6 @@
 {
   "jwtPrivateKey": "hackathon_jwtPrivateKey",
-  "db": "mongodb://127.0.0.1/ta",
+  "db": "mongodb+srv://michaelnady:Xah1dV1JjtTNohjY@ta.fg1kybd.mongodb.net/",
   "port": "3900",
   "requiresAuth": true
 }
