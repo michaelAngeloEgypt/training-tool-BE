@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "83a8cf64-71c6-42be-89bf-5834920adc65",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23708805",
+		"_collection_link": "https://warped-spaceship-547824.postman.co/workspace/TrainingAutomation~812b3e33-7800-41b3-982f-7a297b58cde4/collection/23708805-83a8cf64-71c6-42be-89bf-5834920adc65?action=share&source=collection_link&creator=23708805"
+	},
+	"item": [
+		{
+			"name": "edit",
+			"item": [
+				{
+					"name": "singleUser - add dept",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"64be3cdb7e25283f9ae980cb\",\r\n    \"departmentId\": \"64875dd68c026323ded89753\",\r\n    \"roleInDepartment\": \"SPOC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/edit",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singleUser - change name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"64f98823344783235d26f046\",\r\n    \"name\": \"SuperAdmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/edit",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singleUser - change department",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"648968ad8e23eba6685ee01b\",\r\n    \"name\": \"Renamed\",\r\n    \"departmentId\": \"6478f565f207d956aa0e916c\",\r\n    \"status\": \"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/edit",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single/multiple - updatestatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "superAdmin1@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userIds\": [\"648968ad8e23eba6685ee01b\",\"6490b382bf92abc6c68de755\"],\r\n    \"newStatus\": \"inactive\"\r\n}"
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/updatestatus",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"updatestatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add",
+			"item": [
+				{
+					"name": "single/multiple SPOCs",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Dep Management SPOC4\",\r\n        \"email\": \"dms4@vodafone.com\",\r\n        \"departmentName\": \"Department of Management\",\r\n        \"status\": \"active\"\r\n    },\r\n    {\r\n        \"name\": \"Dep Management SPOC5\",\r\n        \"email\": \"dms5@vodafone.com\",\r\n        \"departmentName\": \"Department of Management\",\r\n        \"status\": \"inactive\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/addSPOCs",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"addSPOCs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single/multiple Admins",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Site Admin1\",\r\n        \"email\": \"sa1@vodafone.com\",\r\n        \"status\": \"active\"\r\n    },\r\n    {\r\n        \"name\": \"Site Admin2\",\r\n        \"email\": \"sa2@vodafone.com\",\r\n        \"status\": \"inactive\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/addAdmins",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"addAdmins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single/multiple Managers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Dep Management Manager3\",\r\n        \"email\": \"dmm3@vodafone.com\",\r\n        \"departmentName\": \"Department of Management\",\r\n        \"status\": \"active\"\r\n    },\r\n    {\r\n        \"name\": \"Dep Management Manager4\",\r\n        \"email\": \"dmm4@vodafone.com\",\r\n        \"departmentName\": \"Department of Management\",\r\n        \"status\": \"inactive\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/addManagers",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"addManagers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "superAdmin1@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"64d16779aa98f5018d8d42d7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/delete",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single/multiple - deleteusers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "superAdmin1@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  \"6481a1e683d3c703c8780d73\",\r\n  \"648968ad8e23eba6685ee01b\"\r\n]"
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/deleteusers",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"deleteusers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "​http://localhost:3900/api/users/me/6481a1e683d3c703c8780d73",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								"me",
+								"6481a1e683d3c703c8780d73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users - no filters",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "​http://localhost:3900/api/users/?page=2&limit=3",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users - filter by roleInDepartment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleInDepartment\": \"SPOC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/?page=2&limit=3",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users - filter by role and status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\":\"admin\",\r\n    \"status\": \"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/users/",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

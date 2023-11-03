@@ -1,0 +1,193 @@
+[{
+  "_id": {
+    "$oid": "6481a1e683d3c703c8780d73"
+  },
+  "name": "Jack Doe",
+  "email": "Jackdoe@example.com",
+  "role": "user",
+  "__v": 0,
+  "departmentId": {
+    "$oid": "6488d200ed5954bf20b7a276"
+  },
+  "roleInDepartment": "SPOC"
+},
+{
+  "_id": {
+    "$oid": "648968ad8e23eba6685ee01b"
+  },
+  "name": "Renamed",
+  "email": "admin3@vodafone.com",
+  "__v": 0,
+  "status": "inactive",
+  "role": "admin"
+},
+{
+  "_id": {
+    "$oid": "6490b382bf92abc6c68de755"
+  },
+  "name": "Jane Doe",
+  "email": "Janedoe@example.com",
+  "departmentId": {
+    "$oid": "6488d200ed5954bf20b7a276"
+  },
+  "role": "user",
+  "roleInDepartment": "SPOC",
+  "__v": 0,
+  "status": "inactive"
+},
+{
+  "_id": {
+    "$oid": "6490e5101707d4019d648b68"
+  },
+  "name": "John Doe",
+  "email": "Johndoe@example.com",
+  "departmentId": {
+    "$oid": "6488d200ed5954bf20b7a276"
+  },
+  "role": "user",
+  "roleInDepartment": "SPOC",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be48b0951052ff5cd5ce23"
+  },
+  "name": "Dep Management SPOC1",
+  "email": "dms1@vodafone.com",
+  "status": "inactive",
+  "role": "user",
+  "__v": 0,
+  "departmentId": {
+    "$oid": "64875dd68c026323ded89753"
+  },
+  "roleInDepartment": "SPOC"
+},
+{
+  "_id": {
+    "$oid": "64be50614f0ac3c512d4e638"
+  },
+  "name": "Dep Management SPOC2",
+  "email": "dms2@vodafone.com",
+  "status": "active",
+  "departmentId": {
+    "$oid": "64875dd68c026323ded89753"
+  },
+  "roleInDepartment": "SPOC",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be50614f0ac3c512d4e63c"
+  },
+  "name": "Dep Management SPOC3",
+  "email": "dms3@vodafone.com",
+  "status": "inactive",
+  "departmentId": {
+    "$oid": "64875dd68c026323ded89753"
+  },
+  "roleInDepartment": "SPOC",
+  "role": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be6b8f775f839454e21662"
+  },
+  "name": "Dep Management Manager1",
+  "email": "dmm1@vodafone.com",
+  "status": "active",
+  "departmentId": {
+    "$oid": "64875dd68c026323ded89753"
+  },
+  "roleInDepartment": "Manager",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be6b8f775f839454e21666"
+  },
+  "name": "Dep Management Manager2",
+  "email": "dmm2@vodafone.com",
+  "status": "inactive",
+  "departmentId": {
+    "$oid": "64875dd68c026323ded89753"
+  },
+  "roleInDepartment": "Manager",
+  "role": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d1667baa98f5018d8d42d3"
+  },
+  "name": "Dep Performing Arts SPOC1",
+  "email": "dpas1@vodafone.com",
+  "departmentId": {
+    "$oid": "64c77f55568332954a2d3f3f"
+  },
+  "roleInDepartment": "SPOC",
+  "role": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d16779aa98f5018d8d42d7"
+  },
+  "name": "Dep Performing Arts SPOC2",
+  "email": "dpas2@vodafone.com",
+  "departmentId": {
+    "$oid": "64c77f55568332954a2d3f3f"
+  },
+  "roleInDepartment": "SPOC",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d20a3821645c5183ff1b32"
+  },
+  "name": "Dep Administration SPOC1",
+  "email": "adms1@vodafone.com",
+  "status": "active",
+  "role": "user",
+  "__v": 0,
+  "departmentId": {
+    "$oid": "64d60705a74f57f54a9141e2"
+  },
+  "roleInDepartment": "SPOC"
+},
+{
+  "_id": {
+    "$oid": "64da7c810d473ebfd372c254"
+  },
+  "name": "Dep Performing Arts SPOC3",
+  "email": "dpas3@vodafone.com",
+  "departmentId": {
+    "$oid": "64c77f55568332954a2d3f3f"
+  },
+  "roleInDepartment": "SPOC",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64f98823344783235d26f046"
+  },
+  "name": "The Super Admin",
+  "email": "superAdmin1@vodafone.com",
+  "__v": 0,
+  "status": "active",
+  "role": "superAdmin"
+},
+{
+  "_id": {
+    "$oid": "652fc1a7a09470e675de371a"
+  },
+  "name": "admin11",
+  "email": "admin11@vodafone.com",
+  "status": "active",
+  "role": "Admin",
+  "__v": 0
+}]

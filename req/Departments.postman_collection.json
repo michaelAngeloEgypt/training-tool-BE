@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "db422ab4-8867-4233-af3b-7647764647a1",
+		"name": "Departments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23708805",
+		"_collection_link": "https://warped-spaceship-547824.postman.co/workspace/TrainingAutomation~812b3e33-7800-41b3-982f-7a297b58cde4/collection/23708805-db422ab4-8867-4233-af3b-7647764647a1?action=share&source=collection_link&creator=23708805"
+	},
+	"item": [
+		{
+			"name": "edit",
+			"item": [
+				{
+					"name": "edit - update name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6488d200ed5954bf20b7a276\",\r\n    \"name\": \"Department of Computing\",\r\n    \"GSLName\": \"Tamer Computing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit - add Manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6488d200ed5954bf20b7a276\",\r\n    \"name\": \"Department of Computing\",\r\n    \"Managers\": [ \"648968ad8e23eba6685ee01b\"  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit - add SPOC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6488d200ed5954bf20b7a276\",\r\n    \"name\": \"Department of Computing\",\r\n    \"SPOCs\": [ \"6490b382bf92abc6c68de755\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add",
+			"item": [
+				{
+					"name": "add - SPOCs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Department of Administration\",\r\n    \"GSLName\": \"Tamer Administration\",\r\n    \"SPOCs\": [\r\n        \"648968ad8e23eba6685ee01b\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "delete department",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"64c77f55568332954a2d3f3f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteManagers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .error-container {\r",
+									"        font-size: 14px;\r",
+									"        color: #333333;\r",
+									"        width: 100%;\r",
+									"        border-width: 1px;\r",
+									"        border-color: #87ceeb;\r",
+									"        border-collapse: collapse;\r",
+									"    }\r",
+									"    .error-container th {\r",
+									"        font-size: 18px;\r",
+									"        background-color: #87ceeb;\r",
+									"        border-width: 1px;\r",
+									"        padding: 8px;\r",
+									"        border-style: solid;\r",
+									"        border-color: #87ceeb;\r",
+									"        text-align: left;\r",
+									"    }\r",
+									"    .error-container tr {\r",
+									"        background-color: #ffffff;\r",
+									"    }\r",
+									"    .error-container td {\r",
+									"        font-size: 14px;\r",
+									"        border-width: 1px;\r",
+									"        padding: 8px;\r",
+									"        border-style: solid;\r",
+									"        border-color: #87ceeb;\r",
+									"    }\r",
+									"    .error-container tr:hover {\r",
+									"        background-color: #e0ffff;\r",
+									"    }\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"error-container\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>Error Message</th>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.errorMessage}}</td>\r",
+									"    </tr>\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    var errorMessage = pm.response.text().split(\"\\n\")[3].trim();\r",
+									"    return { response: { errorMessage: errorMessage } };\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departmentId\": \"64875dd68c026323ded89753\",\r\n    \"ManagerIds\": [\r\n        \"64be6b8f775f839454e21666\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/deleteManagers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"deleteManagers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSPOCs - all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departmentId\": \"6488d200ed5954bf20b7a276\",\r\n    \"SPOCIds\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/deleteSPOCs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"deleteSPOCs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSPOCs - specific",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departmentId\": \"6488d200ed5954bf20b7a276\",\r\n    \"SPOCIds\": [\r\n        \"6490b382bf92abc6c68de755\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/departments/deleteSPOCs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"deleteSPOCs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "Get departments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3900/api/departments/page=2&limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"departments",
+								"page=2&limit=2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

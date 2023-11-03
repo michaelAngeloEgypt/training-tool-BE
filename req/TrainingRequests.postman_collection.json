@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "e2ea78d9-e8aa-4190-a438-f3a916fcae27",
+		"name": "TrainingRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23708805",
+		"_collection_link": "https://warped-spaceship-547824.postman.co/workspace/TrainingAutomation~812b3e33-7800-41b3-982f-7a297b58cde4/collection/23708805-e2ea78d9-e8aa-4190-a438-f3a916fcae27?action=share&source=collection_link&creator=23708805"
+	},
+	"item": [
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3900/api/trainingrequests/64ff74e0179387158cffe404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"64ff74e0179387158cffe404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get standard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestType\": \"standard\",\r\n    \"createdOnDateFrom\":\"2023-10-20T10:29:42.118+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/trainingrequests/?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get adhoc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestType\": \"adhoc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add",
+			"item": [
+				{
+					"name": "add standard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"costcenter\": \"CC3\",\r\n  \"GSLName\": \"michael Administration\",\r\n  \"trainingName\": \"training Name\",\r\n  \"trainingUrl\": \"training Url\",\r\n  \"ceretfication\": \"false\",\r\n  \"labrequired\": \"true\",\r\n  \"noparticipants\": \"3\",\r\n  \"trainingDays\": \"3\",\r\n  \"priority\": \"p1\",\r\n  \"proficiencylevel\": \"l1\",\r\n  \"skillscategory\": \"skills\",\r\n  \"trainingtype\": \"training type\",\r\n  \"businessjustification\": \"business justification\",\r\n  \"deliverytype\": \"deliverytype\",\r\n  \"quarter\": \"q1\",\r\n  \"startDate\": \"2023-09-28\",\r\n  \"endDate\": \"2023-09-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/addstandard",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"addstandard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add adhoc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"costcenter\": \"CC4\",\r\n    \"GSLName\": \"michael Administration\",\r\n    \"trainingName\":\"training Name\",\r\n    \"trainingUrl\":\"training Url\",\r\n    \"ceretfication\":\"false\",\r\n    \"labrequired\":\"true\",\r\n    \"noparticipants\":\"3\",\r\n    \"trainingDays\":\"3\",\r\n    \"priority\":\"p1\",\r\n    \"proficiencylevel\":\"l1\",\r\n    \"skillscategory\":\"skills\",\r\n    \"trainingtype\":\"training type\",\r\n    \"businessjustification\":\"business justification\",\r\n    \"deliverytype\":\"deliverytype\",\r\n    \"quarter\":\"q1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/addadhoc",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"addadhoc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "edit",
+			"item": [
+				{
+					"name": "single/multiple - updatestatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestIds\": [\"65153fd1ef2bf6ca8223ad57\"],\r\n    \"newStatus\": \"InProgress\"\r\n}"
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/updatestatus",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"updatestatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"650b247f6e6e4931d3f4e7f4\",\r\n    \"trainingDays\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/edit",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "approve or reject",
+			"item": [
+				{
+					"name": "approve",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65153fd1ef2bf6ca8223ad57\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/trainingrequests/approve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65153fd1ef2bf6ca8223ad57\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/trainingrequests/approve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "submission cycle",
+			"item": [
+				{
+					"name": "set cycle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CycleStart\": \"2023-09-28\",\r\n    \"CycleEnd\": \"2023-12-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/setcycle",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"setcycle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IsTodayValidForStandardTrainingRequest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "dmm1@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "​http://localhost:3900/api/trainingrequests/IsTodayValidForStandardTrainingRequest",
+							"protocol": "​http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"trainingrequests",
+								"IsTodayValidForStandardTrainingRequest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "6478f565f207d956aa0e916c"
+  },
+  "name": "Department of Engineering",
+  "__v": 0,
+  "GSLName": "Tamer Kandil"
+},
+{
+  "_id": {
+    "$oid": "64875dd68c026323ded89753"
+  },
+  "name": "Department of Management",
+  "__v": 0,
+  "GSLName": "Tamer Amin"
+},
+{
+  "_id": {
+    "$oid": "6488d200ed5954bf20b7a276"
+  },
+  "name": "Department of Computing",
+  "__v": 12,
+  "GSLName": "Tamer Hamed"
+},
+{
+  "_id": {
+    "$oid": "64c77f55568332954a2d3f3f"
+  },
+  "name": "Department of Performing Arts",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d60705a74f57f54a9141e2"
+  },
+  "name": "Department of Administration",
+  "GSLName": "Tamer Administration",
+  "__v": 0
+}]

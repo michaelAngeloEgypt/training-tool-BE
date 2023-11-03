@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "878442b5-03ea-4b58-a72c-8925af482baf",
+		"name": "CancellationRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23708805",
+		"_collection_link": "https://warped-spaceship-547824.postman.co/workspace/TrainingAutomation~812b3e33-7800-41b3-982f-7a297b58cde4/collection/28258523-878442b5-03ea-4b58-a72c-8925af482baf?action=share&source=collection_link&creator=23708805"
+	},
+	"item": [
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"deciding\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/cancellationrequests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"cancellationrequests"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"originalRequestId\": \"65153ff1ef2bf6ca8223ad60\", \r\n  \"cancellationReason\": \"reason\",\r\n  \"status\": \"pending\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/cancellationrequests/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"cancellationrequests",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "approve or reject",
+			"item": [
+				{
+					"name": "approve",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"651ad89c0bc8105db06fea29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/cancellationrequests/approve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"cancellationrequests",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "loggerMail",
+								"value": "admin3@vodafone.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"651ad89c0bc8105db06fea29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/cancellationrequests/reject",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"cancellationrequests",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
