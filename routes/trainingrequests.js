@@ -61,7 +61,6 @@ router.post("/", isAdminOrSPOC, async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-    console.log("from the route call");
     const trainingRequest = await TrainingRequest.findById(req.params.id);
     res.send(trainingRequest);
 });
